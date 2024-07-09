@@ -14,15 +14,19 @@ class BelajarContainer extends StatelessWidget {
         color: Colors.redAccent,
         borderRadius: BorderRadius.circular(10),
         border: Border.all(
-          color: Colors.black,
-          width: 3,
-        )
+          color: Colors.black, 
+          width: 2,
+          ),
       ),
       child: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: )
-        ),
+            image: NetworkImage('https://picsum.photos/200/300'),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(10),
+          ),
+          child: Text('Hallo Ganteng'),
       ),
     );
   }

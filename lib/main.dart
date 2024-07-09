@@ -1,47 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:myapp/container_widget.dart';
+import 'package:myapp/news_container.dart';
+import 'package:myapp/row_column/column_widget.dart';
+import 'package:myapp/row_column/latihan_biodata.dart';
+import 'package:myapp/row_column/latihan_rowcolumn.dart';
+import 'package:myapp/row_column/row_widget.dart';
 
-void main() {
+void main (){
   runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Belajar Flutter',
       home: Scaffold(
-        backgroundColor: Color.fromARGB(255, 94, 152, 254),
+        backgroundColor: Colors.blueAccent,
         appBar: AppBar(
-          title: Text('Belajar Flutter'),
+          title: Text('Biodata'),
           centerTitle: true,
-          backgroundColor: Colors.pinkAccent,
+          backgroundColor: Color.fromARGB(255, 43, 55, 219),
         ),
-        body: BelajarContainer(),
-      ),
-    );
-  }
-}
-
-class NewWidget extends StatelessWidget {
-  const NewWidget({
-    super.key,
-    });
-
-    @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Text(
-        'Hallo Dunia',
-        style: TextStyle(
-          fontSize: 30,
-          fontWeight: FontWeight.bold,
-          color: Colors.white,
-          fontFamily: 'Poppins',
-        ),
+        body: LatihanBiodata(),
       )
     );
   }
